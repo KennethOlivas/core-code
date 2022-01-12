@@ -39,14 +39,13 @@ function convertir(dollar) {
 
 ## 6. Create a pseudocode to calculate the aproximated age of a user base on the year they born, (you can define a variable with the actual year if you need it, like for example i could define Y <-- 2022)
 
- 1. crear variable x y asignar el valor 2022 
- 2. crear variable e    
- 3. pedir la edad al usuario y asignarla a la variable e
- 4. Verificar si la e no es mayor que x
- 5. Restar e a x (x - e)
- 6. imprimir el resultado
+  1. START
+  2. Y <-- 2022
+  3. X <-- GET
+  4. R <-- Y - X
+  5. PRINT R
+  6. END
 
-  
  ## 8. Why are flowcharts important to us as developers?
   
  Es importante por nos ayuda a:
