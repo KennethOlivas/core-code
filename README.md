@@ -24,9 +24,8 @@ Java es un lenguaje interpretado
 
 ## 3. Create an algorithm to calculate the equivalent of your local currencty to USD
 
-let cordoba = 35.42 //valor de la moneda local
+let cordoba = 35.42 
 
-// calculo de dollar a cordobas 
 function convertir(dollar) {
     let resultado = dollar * cordoba
     return resultado
@@ -48,5 +47,11 @@ function convertir(dollar) {
  6. imprimir el resultado
 
   
+ ## 8. Why are flowcharts important to us as developers?
   
-  
+ Es importante por nos ayuda a:
+ - demostrar cómo el código está organizado.
+ - Visualizar la ejecución de un código dentro de un programa.
+ - Mostrar la estructura de un sitio web o aplicación.
+ - Comprender cómo los usuarios navegan por un sitio web o programa
+ 
