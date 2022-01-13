@@ -1,7 +1,7 @@
 # core-code
 Core code bootcamp
 
-
+# Week challenges (Tuesday) 💻
 ## 1. video about compilation and interpretation
 
 ### Compilado
@@ -54,3 +54,4 @@ function convertir(dollar) {
  - Mostrar la estructura de un sitio web o aplicación.
  - Comprender cómo los usuarios navegan por un sitio web o programa
  
+# Week challenges (Wednesday) 💻
