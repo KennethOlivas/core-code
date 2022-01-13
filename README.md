@@ -24,12 +24,12 @@ Java es un lenguaje interpretado
 
 ## 3. Create an algorithm to calculate the equivalent of your local currencty to USD
 
-let cordoba = 35.42 
+	let cordoba = 35.42 
 
-function convertir(dollar) {
-    let resultado = dollar * cordoba
-    return resultado
-}
+	function convertir(dollar) {
+	    let resultado = dollar * cordoba
+	    return resultado
+	}
 
 
 ## 5. Why is pseudocode helpful?
@@ -46,7 +46,7 @@ function convertir(dollar) {
   5. PRINT R
   6. END
 
- ## 8. Why are flowcharts important to us as developers?
+## 8. Why are flowcharts important to us as developers?
   
  Es importante por nos ayuda a:
  - demostrar cómo el código está organizado.
@@ -92,11 +92,11 @@ R: CAFE
 
 R:1100101011111110
 
-# 4. Use a Low-level language, for example MIPS aseembler, to do so, you will need to follow this guide. We recomend to check the guide first but also this presentation could be helpful.
+##  4. Use a Low-level language, for example MIPS aseembler, to do so, you will need to follow this guide. We recomend to check the guide first but also this presentation could be helpful.
 
 R: Done
-# Base on the examples and the guide of the low-level language: 
-## 5.1 Create a program to add two numbers given by the user 
+##  Base on the examples and the guide of the low-level language: 
+###  5.1 Create a program to add two numbers given by the user 
 R:
 
     .data
@@ -137,7 +137,7 @@ R:
             move $a0 , $s0 
             syscall
 
-## 5.2 Create a program that display your name
+### 5.2 Create a program that display your name
 	.data
              buffer: .space 20
              inptutStr1:  .asciiz "Enter string (max 20 chars): "
