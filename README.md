@@ -140,29 +140,29 @@ R:
 ## 5.2 Create a program that display your name
 	.data
              buffer: .space 20
-             inptutStr1:  .asciiz "Enter string(max 20 chars): "
+             inptutStr1:  .asciiz "Enter string (max 20 chars): "
              name:  .asciiz ""
 	.text
 		main:
-		 la $a0,inptutStr1 #Load and print string asking for string
-		 li $v0,4
+		 la $a0, inptutStr1 #Load and print string asking for string
+		 li $v0, 4
 		 syscall
 
-		 li $v0,8
+		 li $v0, 8
 		 la $a0, buffer 
 		 li $a1, 20
-		 move $t0,$a0 
+		 move $t0, $a0 
 		 syscall
 
-		 la $a0,name
-		 li $v0,4
+		 la $a0, name
+		 li $v0, 4
 		 syscall
 
 		 la $a0, buffer #reload byte space to primary address
-		 move $a0,$t0 # primary address = t0 address (load pointer)
-		 li $v0,4 # print string
+		 move $a0, $t0 # primary address = t0 address (load pointer)
+		 li $v0, 4 # print string
 		 syscall
 
-		 li $v0,10 
+		 li $v0, 10 
 		 syscall
 
