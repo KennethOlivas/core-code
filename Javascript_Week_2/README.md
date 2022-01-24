@@ -1,3 +1,6 @@
+
+# Javascript - Week 2
+
 ## Multiply
     function multiply(a, b) {
         return a * b
@@ -113,7 +116,7 @@
         return `Player ${winner} won!`;
     }
 
-##Persistent Bugger
+## Persistent Bugger
 
     const persistence = (num) => {
         let count = 0;
