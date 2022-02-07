@@ -67,7 +67,7 @@
         }
     }
 
-##Fake Binary
+## Fake Binary
 
     function fakeBin(x) {
         let res = '';

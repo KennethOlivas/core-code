@@ -29,9 +29,6 @@ const duplicateCount = (text) => {
 
 //console.log(duplicateCount("Indivisibility"));
 
-
-
-
 const pigIt = (str) => {
     let res = '';
     let arr = str.split(' ');
@@ -145,10 +142,6 @@ function foldArray(array, runs) {
     }
     return folded;
 }
-
-
-
-
 
 
 const encode = (str) => {

@@ -1,6 +1,22 @@
 
 // weak 4 
 
+
+
+const findOdd = (A) => {
+    return A.reduce((acc, curr) => {
+        return acc ^ curr;
+    }, 0);
+}
+
+const spinWords = (string) => { 
+    return string.split(' ').map(word => {
+        return word.length >= 5 ? word.split('').reverse().join('') : word;
+    }
+    ).join(' ');
+}
+
+
 const array_diff = (a, b) => {
     return a.filter(element => !b.includes(element));
 }
