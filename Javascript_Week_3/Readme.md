@@ -170,3 +170,17 @@
     }
     
 ## Format a string of names like 'Bart, Lisa & Maggie'. (retired)
+
+    const list = (names) => {
+        let res = '';
+        for (let i = 0; i < names.length; i++) {
+            if (i === names.length - 2) {
+                res += names[i].name + ' & ';
+            } else if (i === names.length - 1) {
+                res += names[i].name;
+            } else {
+                res += names[i].name + ', ';
+            }
+        }
+        return res;
+    }
