@@ -88,7 +88,6 @@ console.log(revrot("123456987654", 6));
 
 
 const findThePoisoned = (rats) => {
-    // covert array to binary and the result to int
     let binary = rats.reduce((acc, curr) => {
         return acc + Math.pow(2, curr);
     }, 0);
