@@ -1,15 +1,38 @@
 
+
+function likes(names) {
+    let display
+    let totalNames = names.length - 2
+    if (names.length === 0) {
+        display = 'no one likes this'
+    } else if (names.length === 1) {
+        display = `${names[0]} likes this`
+    } else if (names.length === 2) {
+        display = `${names[0]} and ${names[1]} like this`
+    }
+    else if (names.length === 3) {
+        display = `${names[0]}, ${names[1]} and ${names[2]} like this`
+    }
+    else if (names.length > 3) {
+        display = `${names[0]}, ${names[1]} and ${totalNames} others like this`
+    }
+    return display
+}
+
+var countBits = function (n) {
+    // Program Me
+    let binary = n.toString(2);
+    let count = 0;
+    for (let i = 0; i < binary.length; i++) {
+        count += binary[i] === '1' ? 1 : 0;
+    }
+    return count;
+}
+
 const order = (words) => {
-    let i = 0;
     let res = words.split(' ').sort((a, b) => {
-        i++
-        console.log(i, " a: ", a, "b: ", b);
-        //Busca cualquier caracter que no sea un dígito y lo ordena de mayor a menor
-        console.log(a.match(/\D/g));
-        console.log(b.match(/\D/g));
-        return a.match(/\d/) - b.match(/\d/);
+        return a.match(/\d/) - b.match(/\d/); 
     });
-    console.log("res ", res);
     return res.join(' ');
 }
 
