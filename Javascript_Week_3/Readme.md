@@ -101,4 +101,72 @@
         return count === 0;
     }
 
+## Convert string to camel case
 
+    const toCamelCase = (str) => {
+        str = str.split('');
+        return str.map((element, index) => {
+            console.log(element, index);
+            if (element == '-' || element == '_') {
+                element = str[index + 1].toUpperCase();
+                str.splice(index + 1, 1);
+            }
+            return element;
+        }).join('');
+    }
+    
+ ## Unique In Order
+     const uniqueInOrder = (iterable) => {
+        let res = [];
+        let arr
+        if (typeof iterable === 'string') {
+            arr = iterable.split('');
+        } else if (typeof iterable === 'number') {
+            arr = iterable.toString().split('');
+        } else {
+            arr = iterable;
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== arr[i + 1]) {
+                res.push(arr[i]);
+            }
+        }
+        return res;
+    }
+    
+ ## Fold an array
+
+     function foldArray(array, runs) {
+        const folded = [...array]
+        for (let i = 0; i < runs; i++) {
+            folded.map((element, index, arr) => {
+                index + 1 === arr.length
+                    ? element
+                    : arr[index] = element + arr.pop()
+            });
+        }
+        return folded;
+    }
+    
+ ## Encrypt this!
+ 
+     const encryptThis = (text) => {
+        // text = "A wise old owl lived in an oak"
+        let string = text.split(' '); // ["A", "wise", "old", "owl", "lived", "in", "an", "oak"]
+        let outputString = []; // array of strings to be returned
+        string.map((str) => {
+            if (str.length === 1) { // if the string is 1 character long
+                outputString.push(str.charCodeAt(0)); // "A" => 65, "w" => 119, "i" => 105, "s" => 115, "e" => 101, "o" => 111, "l" => 108, "d" => 100, " " => 32, "o" => 111, "k" => 107, "a" => 97
+            }
+            else {
+                let tempStr = str.split(''); //split the string into an array => "wise" => ["w", "i", "s", "e"]
+                tempStr[0] = str.charCodeAt(0); //get the char code of the first char  => "w" => 119 = "119ise"
+                tempStr[1] = str[str.length - 1]; //get the char code of the last char => "119ese
+                tempStr[str.length - 1] = str[1]; //get the char code of the second to last char  => "119esi"
+                outputString.push(tempStr.join('')); //join the array into a string => "119esi"
+            }
+        });
+        return outputString.join(' '); //join the array into a string 
+    }
+    
+## Format a string of names like 'Bart, Lisa & Maggie'. (retired)
