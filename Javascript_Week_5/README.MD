@@ -169,18 +169,69 @@
       return result;
   }
 ```
+## Find the odd int
 
-
-```javascript
-
+```typescript
+  export const findOdd = (xs: number[]): number => {
+      let result: number = 0;
+      for (let i = 0; i < xs.length; i++) {
+          let count: number = 0;
+          for (let j = 0; j < xs.length; j++) {
+              if (xs[i] === xs[j]) {
+                  count++;
+              }
+          }
+          if (count % 2 !== 0) {
+              result = xs[i];
+          }
+      }
+      return result;
+  };
 ```
 
+## Which are in?
 
-```javascript
+```typescript
+  export class G964 {
+    public static inArray(a1: string[], a2: string[]): string[] {
+      // your code
+      let arr = a2.join(" ")
+      return a1.filter(item => arr.search(item) !== -1 && item !== undefined ).sort()
 
+    }
+  }
 ```
 
+## Sums of Parts
 
-```javascript
+```typescript
+  export function partsSums(ls: number[]): number[] {
+      let sum = ls.reduce((sum, n) => sum + n, 0)
+      let res  = [sum]
+      for (let i = 0; i < ls.length; i++){
+          sum -= ls[i]
+          res.push(sum)
+      }
+      return res
+  }
+```
 
+## Consecutive strings
+
+```typescript
+  export function longestConsec(strarr: string[], k: number): string {
+      let longest = '';
+      let longestLength = 0;
+      for (let i = 0; i < strarr.length - k + 1; i++) {
+          let temp = '';
+          for (let j = 0; j < k; j++) {
+              temp += strarr[i + j];
+          }
+          if (temp.length > longestLength) {
+              longest = temp;
+              longestLength = temp.length;
+          }
+      }
+      return longest;
+  }
 ```
