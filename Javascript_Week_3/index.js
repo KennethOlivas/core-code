@@ -213,4 +213,24 @@ const lastDigit = (number) => {
     return sum > 0 ? (10 - sum) : 0;
 }
 
-console.log(lastDigit(39847));
+/*
+Implement a Tic-Tac-Toe (AKA: Noughts and crosses, Xs and Os) solver. The input to the solver function will be an array of length 9 representing the board. Output of the function will be the index of the desired move (0-8). You will always be X. You must make a valid move, and a winning move if available
+*/
+
+function solveTTT(board) {
+    let moves = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+    let boardArr = board.slice();
+    let win = false;
+    let res = 0;
+    while (!win) {
+        let index = moves.shift();
+        if (boardArr[index] === 0) {
+            boardArr[index] = 1;
+            if (checkWin(boardArr)) {
+                win = true;
+                res = index;
+            }
+        }
+    }
+    return res;
+}
